@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!--This page acts as the common layout template-->
+<head>
+    <title>The Joel Hilton Film Collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+</head>
+
+<body>
+    <!--This home link will act as the shared navigation-->
+    <header>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            </ul>
+        </menu>
+    </header>
+    <h1>@ViewBag.Title</h1>
+
+
+    <!--We render the body in between this html-->
+    @RenderBody()
+
+    <br />
+    <br />
+    <footer>Test Copyright 2021 IS 413</footer>
+</body>
+
+</html>

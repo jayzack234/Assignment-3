@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Thank you for your submission";
+}
+
+<!--This page will act as an intermediary between the submission page and movies displayed page-->
+
+<!--This makes sure we are accessing the proper models and therefore the proper information submitted-->
+@model Assignment_3.Models.MovieResponse
+
+<div>
+    <h2>Click the link below to see the detailed list of all movies that have been submitted. Please note that Independence Day will never display.</h2>
+</div>
+
+<div>
+    <a asp-action="List">Movie List</a>
+</div>
+

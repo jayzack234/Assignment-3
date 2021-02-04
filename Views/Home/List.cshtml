@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Movies Submitted Detailed List";
+}
+
+@model  IEnumerable<Assignment_3.Models.MovieResponse>
+
+<!--Here will we will use a loop to go through each of the inputs and generate a table tag for each input-->
+<div>
+    <table>
+        <thead>
+            <tr><th>Category</th><th>Title</th><th>Year</th><th>Director</th><th>Rating</th><th>Edited</th><th>Lent</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+            @foreach (Assignment_3.Models.MovieResponse x in Model)
+            {
+            <tr>
+                <td>@x.Category</td>
+                <td>@x.Title</td>
+                <td>@x.Year</td>
+                <td>@x.Director</td>
+                <td>@x.Rating</td>
+                <td>@x.Edited</td>
+                <td>@x.Lent</td>
+                <td>@x.Notes</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
